@@ -3,6 +3,7 @@ import styled from "styled-components"
 import wall from "../../static/wall.jpg"
 import avatar from "../../static/av.png"
 import { device } from "../util/globals"
+import Typed from "react-typed"
 
 function IntroductionPanel() {
   const Container = styled.div`
@@ -99,9 +100,18 @@ function IntroductionPanel() {
           <BarDot style={{ backgroundColor: "green" }} />
         </TopBar>
         <Typing>
-          Hello
-          <br />
-          I'm Paweł :I
+          <Typed
+            strings={[
+              "Hello<br>",
+              "Hello<br>I'm Pawel",
+              "Hello<br>I'm Pawe",
+              "Hello<br>I'm Paweł",
+              "Hello<br>I'm Paweł :I ",
+            ]}
+            typeSpeed={40}
+            backSpeed={50}
+            cursorChar={"█"}
+          />
         </Typing>
       </Terminal>
       <Avatar />
